@@ -60,15 +60,18 @@ with open(budget_path, 'r') as csvfile:
 
 
 #Print out the message
-print ("Financial Analysis")
-print ("-----------------------")
-print (f"Total Months: {months_count}")
-print (f"Average Change: ${avg_profit}")
-print(f"Greatest Increase in Profits: {g_inc_date} ({g_inc})")
-print(f"Greatest Decrease in Profits: {g_dec_date} ({g_dec})")
 
+Line_1 = "Financial Analysis"
+Line_2 = "-----------------------"
+Line_3 = f"Total Months: {months_count}"
+Line_4 = f"Average Change: ${avg_profit}"
+Line_5 = f"Greatest Increase in Profits: {g_inc_date} ({g_inc})"
+Line_6 = f"Greatest Decrease in Profits: {g_dec_date} ({g_dec})"
 
-# output_path = pathlib('Analysis/Financial_Analysis.txt')
+print (Line_1,"\n",Line_2,"\n",Line_3,"\n",Line_4,"\n",Line_5,"\n",Line_6)
 
-# with open(output_path, 'w') as f:
-#     f.write("Hello World")
+#Create text file fo analysis
+output_path = pathlib.Path('Analysis/Financial_Analysis.txt')
+
+with open(output_path, 'w') as output:
+    output.write("{}\n{}\n{}\n{}\n{}\n{}\n".format(Line_1, Line_2, Line_3, Line_4, Line_5, Line_6))
