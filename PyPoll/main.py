@@ -49,7 +49,29 @@ with open(poll_path, 'r') as csvfile:
         if winner_perc < vote_perc[i]:
             winner = candidate[i]
     
- #Print out Results
+ #Print out Result
+line_4 = []
 
+line_1 = "Election Results"
+line_2 = "-------------------------------------"
+line_3 = (f"Total Votes: {votes_count}")
+for i in range (0, len(candidate)):
+    line_4.append(f"{candidate[i]}: {vote_perc[i]}% ({can_vote_count[i]})")
+line_5 = f"Winner : {winner}"
+
+
+
+print(line_1,"\n",line_2,"\n",line_3,"\n",line_2, sep="")
+for i in line_4:
+    print(i)
+print(line_2,"\n",line_5,"\n",line_2, sep="")
 
 #Create output for result
+output_path = pathlib.Path('Analysis/Poll_Analysis.txt')
+
+with open(output_path, 'w') as output:
+    output.write("{}\n{}\n{}\n{}\n".format(line_1, line_2, line_3, line_2))
+    for i in line_4:
+        output.write(i)
+        output.write("\n")
+    output.write("{}\n{}\n{}\n".format(line_2, line_5, line_2))

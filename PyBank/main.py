@@ -9,7 +9,7 @@ budget_path = pathlib.Path('Resources/budget_data.csv')
 with open(budget_path, 'r') as csvfile:
     csvreader = csv.reader(csvfile, delimiter = ",")
 
-    #For loop to iterate through each month
+    #Variables
     months = next(csvreader)
     
     months_count = 0
@@ -19,6 +19,7 @@ with open(budget_path, 'r') as csvfile:
     profit_change = []
     date = []
 
+    #For loop to iterate through each month
     for row in csvreader:
         #Count the number of Months
         months_count += 1
@@ -68,7 +69,7 @@ Line_4 = f"Average Change: ${avg_profit}"
 Line_5 = f"Greatest Increase in Profits: {g_inc_date} ({g_inc})"
 Line_6 = f"Greatest Decrease in Profits: {g_dec_date} ({g_dec})"
 
-print (Line_1,"\n",Line_2,"\n",Line_3,"\n",Line_4,"\n",Line_5,"\n",Line_6)
+print (Line_1,"\n",Line_2,"\n",Line_3,"\n",Line_4,"\n",Line_5,"\n",Line_6, sep="")
 
 #Create text file fo analysis
 output_path = pathlib.Path('Analysis/Financial_Analysis.txt')
