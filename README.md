@@ -14,11 +14,11 @@ Data analysis on financial records and polls for election
   Using python, open the company financial records in CSV file to access the monthly profit/loss data.
   
   While looping through each month, calcuate the change in profit/loss every next month, then print out the following results:
-    *The total number of months included in the dataset
-    *The net total amount of "Profit/Losses" over the entire period
-    *The average of the changes in "Profit/Losses" over the entire period
-    *The greatest increase in profits (date and amount) over the entire period
-    *The greatest decrease in losses (date and amount) over the entire period
+    * The total number of months included in the dataset
+    * The net total amount of "Profit/Losses" over the entire period
+    * The average of the changes in "Profit/Losses" over the entire period
+    * The greatest increase in profits (date and amount) over the entire period
+    * The greatest decrease in losses (date and amount) over the entire period
   
   
 ### Conclusion ###
